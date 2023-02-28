@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useRef, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import Spinner from "./Spinner";
+import RAPID_API_TOKEN from "./apikey";
 import { youtube_parser } from "./URL_PARSER";
 
 const GlobalStyle = createGlobalStyle`
@@ -29,7 +29,7 @@ function App() {
       method: "get",
       url: "https://youtube-mp36.p.rapidapi.com/dl",
       headers: {
-        "X-RapidAPI-Key": "d0b4be5dc9mshf40951c03e0ecfep1d36b5jsnc315bc54f5dd",
+        "X-RapidAPI-Key": RAPID_API_TOKEN,
         "X-RapidAPI-Host": "youtube-mp36.p.rapidapi.com",
       },
       params: {
